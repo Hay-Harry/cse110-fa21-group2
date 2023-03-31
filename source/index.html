@@ -51,7 +51,7 @@
             </ul>
             <form class="d-flex" onsubmit="return false">
                 <div class="input-group mx-2">
-                    <input required type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                    <input required type="text" class="form-control" id='search-results-input' placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
                     <button class="input-group-text" id='search-results-nav'>🔍</button>
                 </div>
             </form>
@@ -94,6 +94,8 @@
                             <div class="sort-filters-wrapper">
                                 <div class="sort-filters-top">
                                     <h2 class="sort-filters-heading">Sort and Filter</h2>
+                                    <hr class="solid">
+                                    <button id="apply-sort-filter-top" class="apply-sort-filter" type="button">Apply</button>
                                     <hr class="solid">
                                     <button id="display-sort-filter" class="sort-filter" type="button">Hide Sort and Filter</button>
                                 </div>
@@ -233,11 +235,12 @@
                                         <hr class="solid">
                                         <div class="filters-max-time">
                                             <div class="filters-max-time-header">
-                                                <label class="sort-filter-label">Max prep time:</label>
+                                                <label class="sort-filter-label">Total time:</label>
                                             </div>
                                             <div class="filters-max-time-body">
                                                 <div class="filter-max-time-input">
-                                                    <input type="range" id='max-time' value="" min="0" max="1440" step="10" oninput="this.nextElementSibling.nextElementSibling.value = this.value + ' min (roughly ' + (this.value/60).toFixed(2) + ' hr)'"><br>
+                                                    <!--<input type="range" id='max-time' value="" min="0" max="1440" step="10" oninput="this.nextElementSibling.nextElementSibling.value = this.value + ' min (roughly ' + (this.value/60).toFixed(2) + ' hr)'"><br>-->
+                                                    <input type="number" name ="max-time" id ="max-time" placeholder="Minutes" min="0" max="360" value = "" step="10" oninput="this.nextElementSibling.nextElementSibling.value = this.value + ' min (roughly ' + (this.value/60).toFixed(2) + ' hr)'"><br>
                                                     <output class="max-time-output">Default</output>
                                                 </div>
                                             </div>

@@ -233,7 +233,36 @@ button.sort-filter {
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
-  width: 13rem;
+  width: 100%;
+}
+
+button.apply-sort-filter {
+  background-color: rgb(250 240 160);
+  border: 1px solid grey;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+button.apply-sort-filter:hover {
+  background-color: rgb(240 220 130);
+  border: 1px solid grey;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
 }
 
 button.apply {
@@ -462,7 +491,7 @@ output.max-time-output {
   display: flex;
   height: 2rem;
   justify-content: space-between;
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .steps-wrapper {
@@ -567,12 +596,15 @@ output.max-time-output {
 /* image CSS style */
 
 .recipe-img {
+  align-self: center;
+  display: block;
   height: auto;
   margin: 0;
-  max-height: 27rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: fit-content;
   object-fit: cover;
   outline: 1px solid rgb(0 0 0);
-  width: 100%;
 }
 
 /* text CSS style */
